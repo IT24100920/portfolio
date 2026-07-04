@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thulaxshi Thileeparan - Full Stack Developer / Software Engineer Portfolio. Exploring AI integration, enterprise backends, and responsive web/mobile applications.">
+    <title>Thulaxshi Thileeparan | Full Stack Developer & Software Engineer</title>
+    
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 for general UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon for brand/tech-stack icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="64x64" href="assets/images/favicon.png">
+    
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark-theme is-loading">
+    <!-- Full-screen intro loader -->
+    <div class="page-loader" id="page-loader" aria-hidden="true">
+        <div class="page-loader__stage">
+            <div class="page-loader__ecg" aria-hidden="true">
+                <svg class="page-loader__ecg-svg" viewBox="0 0 420 100" role="presentation">
+                    <defs>
+                        <linearGradient id="loader-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#8b5cf6" />
+                            <stop offset="38%" stop-color="#ff4ecb" />
+                            <stop offset="70%" stop-color="#9c7bff" />
+                            <stop offset="100%" stop-color="#30d5ff" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        class="page-loader__ecg-track"
+                        d="M 6 50 H 414"
+                    />
+                    <path
+                        class="page-loader__ecg-path"
+                        d="M 6 50 H 64 L 72 50 L 80 24 L 86 90 L 92 14 L 100 76 L 108 50 H 150 L 158 50 L 166 35 L 172 66 L 178 26 L 184 84 L 192 50 H 238 L 246 50 L 254 18 L 260 88 L 266 16 L 274 80 L 282 50 H 326 L 334 50 L 342 30 L 348 64 L 354 38 L 360 72 L 368 50 H 414"
+                    />
+                </svg>
+            </div>
+            <div class="page-loader__name" aria-label="Thulaxshi Thileeparan">
+                <span class="page-loader__name-part" id="loader-first-name"></span>
+                <span class="page-loader__name-gap" aria-hidden="true"></span>
+                <span class="page-loader__name-part" id="loader-last-name"></span>
+            </div>
+            <div class="page-loader__subtitle">SOFTWARE ENGINEER</div>
+        </div>
+    </div>
+
+    <!-- Background Canvas for interactive particle network -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Sticky Glassmorphism Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#hero" class="logo">
+                <span class="logo-tag">&lt;</span>Thulaxshi<span class="logo-tag"> /&gt;</span>
+            </a>
+            
+            <nav class="navbar" id="navbar">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#what-i-do" class="nav-link">Services</a>
+                <a href="#journey" class="nav-link">Journey</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-status">
+                    <span class="status-dot"></span> Available for Internships
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="text-glow">Thulaxshi Thileeparan</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I am a <span class="typing-text" id="typed-text"></span><span class="cursor">&nbsp;</span>
+                </h2>
+                <p class="hero-description">
+                    Software engineering enthusiast with hands-on experience in full-stack development, software design, and database management. Proficient in Java, JavaScript, Python, SQL, React, Node.js, MySQL, and MongoDB.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/IT24100920" target="_blank" class="social-link" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thulaxshi-thileeparan-507361402" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:thulaxshithileeparan@gmail.com" class="social-link" title="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="tel:+94742298210" class="social-link" title="Call Me">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-glow-ring"></div>
+                <div class="profile-image-container">
+                    <img id="profile-img" src="assets/images/profile.jpg" alt="Thulaxshi Thileeparan" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Can Do Section -->
+    <section id="what-i-do" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">&lt;services&gt;</span>
+                <h2 class="section-title">What I Can Do</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Useful solutions I can build for businesses, academic teams, and real-world users.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Left panel with stats and general intro -->
+                <div class="services-intro-card">
+                    <span class="card-badge">AVAILABLE FOR BUILD</span>
+                    <h3 class="intro-card-title">Web, data, and AI-powered product work</h3>
+                    <p class="intro-card-description">
+                        I can turn an idea into a clean working system, from database design and backend APIs to interactive dashboards, responsive user interfaces, and custom machine learning features.
+                    </p>
+                    <div class="intro-tags">
+                        <span class="intro-tag">React</span>
+                        <span class="intro-tag">Node.js</span>
+                        <span class="intro-tag">Spring Boot</span>
+                        <span class="intro-tag">Python</span>
+                        <span class="intro-tag">SQL</span>
+                        <span class="intro-tag">Machine Learning</span>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-number">5+</span>
+                            <span class="metric-label">Academic Projects</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-number">15+</span>
+                            <span class="metric-label">Tech Tools Mastered</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-number">100%</span>
+                            <span class="metric-label">Commitment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right panel list of specific capabilities -->
+                <div class="services-list-container">
+                    <!-- Service 1 -->
+                    <div class="service-card" data-index="01">
+                        <div class="service-card-header">
+                            <div class="service-icon-box">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <span class="service-number">01</span>
+                        </div>
+                        <h4 class="service-card-title">AI / ML Solutions</h4>
+                        <p class="service-card-text">
+                            Prediction models, classification tasks, data cleaning pipelines, and practical AI integrations (such as chatbots and image evaluation models) for real problems.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card" data-index="02">
+                        <div class="service-card-header">
+                            <div class="service-icon-box">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <span class="service-number">02</span>
+                        </div>
+                        <h4 class="service-card-title">Full-Stack Development</h4>
+                        <p class="service-card-text">
+                            End-to-end web architectures featuring interactive React frontend views, secure backend REST APIs in Spring Boot or Node.js, and reliable user authentication flows.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card" data-index="03">
+                        <div class="service-card-header">
+                            <div class="service-icon-box">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <span class="service-number">03</span>
+                        </div>
+                        <h4 class="service-card-title">Data Analysis & Prep</h4>
+                        <p class="service-card-text">
+                            Extracting insights through dataset preprocessing, visualization, feature engineering, and reporting using Python, Pandas, Matplotlib, and Scikit-learn.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card" data-index="04">
+                        <div class="service-card-header">
+                            <div class="service-icon-box">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <span class="service-number">04</span>
+                        </div>
+                        <h4 class="service-card-title">Database Systems</h4>
+                        <p class="service-card-text">
+                            Structured SQL schemas and MongoDB document collections. Implementing robust CRUD interfaces, relational data integrity, and performant query handling.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card" data-index="05">
+                        <div class="service-card-header">
+                            <div class="service-icon-box">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <span class="service-number">05</span>
+                        </div>
+                        <h4 class="service-card-title">Mobile Applications</h4>
+                        <p class="service-card-text">
+                            Cross-platform mobile application development using React Native. Integrating native device capabilities, storage structures, and API sync processes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Journey Section -->
+    <section id="journey" class="section-padding journey-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">&lt;journey&gt;</span>
+                <h2 class="section-title">My Journey</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Academic projects, freelance builds, and growth toward full-stack engineering.</p>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- Vertical Progress Line -->
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+                
+                <!-- Timeline Nodes -->
+                <div class="timeline-items">
+                    <!-- Item 1: Smart Rider Safety System -->
+                    <div class="timeline-item left-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">July 2024 - Nov 2024</span>
+                                <span class="timeline-badge badge-hardware">IoT / Embedded</span>
+                            </div>
+                            <h3 class="timeline-title">IoT & Hardware Foundation</h3>
+                            <h4 class="timeline-subtitle">Smart Rider Safety System</h4>
+                            <p class="timeline-desc">
+                                Started my journey by combining software with hardware. Built real-time collision and anomaly detection tools using C++ and Arduino microcontrollers.
+                            </p>
+                            <div class="timeline-tech">
+                                <span>C++</span>
+                                <span>Arduino</span>
+                                <span>Sensors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Medical Appointment Scheduling System -->
+                    <div class="timeline-item right-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Feb 2025 - June 2025</span>
+                                <span class="timeline-badge badge-backend">Core Java / OOP</span>
+                            </div>
+                            <h3 class="timeline-title">Object-Oriented Programming & Web</h3>
+                            <h4 class="timeline-subtitle">Medical Appointment Scheduling</h4>
+                            <p class="timeline-desc">
+                                Scaled my software capabilities by mastering OOP principles, data structures, and algorithms. Built client-server routing logic using Java Servlets.
+                            </p>
+                            <div class="timeline-tech">
+                                <span>Java</span>
+                                <span>Servlets</span>
+                                <span>HTML/CSS</span>
+                                <span>DSA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Fake Instagram Profile Detection -->
+                    <div class="timeline-item left-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">July 2025 - Sep 2025</span>
+                                <span class="timeline-badge badge-ai">Machine Learning</span>
+                            </div>
+                            <h3 class="timeline-title">AI Model Training & Data Prep</h3>
+                            <h4 class="timeline-subtitle">Fake Instagram Profile Detection</h4>
+                            <p class="timeline-desc">
+                                Explored the world of artificial intelligence. Learned dataset cleaning, feature scaling, model selection (Random Forest), and evaluation.
+                            </p>
+                            <div class="timeline-tech">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>Scikit-learn</span>
+                                <span>NumPy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Online Banking System -->
+                    <div class="timeline-item right-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">July 2025 - Nov 2025</span>
+                                <span class="timeline-badge badge-enterprise">Enterprise Backend</span>
+                            </div>
+                            <h3 class="timeline-title">Relational Databases & Frameworks</h3>
+                            <h4 class="timeline-subtitle">Online Banking Portal</h4>
+                            <p class="timeline-desc">
+                                Focused on enterprise-grade safety. Created secure financial routing components with Java Spring Boot and established secure transactional MySQL configurations.
+                            </p>
+                            <div class="timeline-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>MySQL</span>
+                                <span>Agile Scrum</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: AI-Powered Automobile Marketplace -->
+                    <div class="timeline-item left-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Feb 2026 - June 2026</span>
+                                <span class="timeline-badge badge-fullstack">Advanced Full Stack</span>
+                            </div>
+                            <h3 class="timeline-title">Modern Full-Stack & AI Integration</h3>
+                            <h4 class="timeline-subtitle">AI Automobile Marketplace</h4>
+                            <p class="timeline-desc">
+                                Consolidated all of my experience. Developed responsive web (React) and mobile (React Native) products integrated with MongoDB, Node.js, and the DeepSeek Chatbot API.
+                            </p>
+                            <div class="timeline-tech">
+                                <span>React</span>
+                                <span>React Native</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>DeepSeek API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A collection of languages, frameworks, databases, and libraries I work with.</p>
+            </div>
+            
+            <div class="skills-wrapper">
+                <!-- Category 1: Languages -->
+                <div class="skill-category-card glass-card">
+                    <h3 class="skill-cat-title"><i class="fa-solid fa-code"></i> Programming Languages</h3>
+                    <div class="skills-badges">
+                        <div class="skill-badge" title="Java">
+                            <i class="devicon-java-plain colored"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-badge" title="JavaScript">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-badge" title="Python">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-badge" title="C++">
+                            <i class="devicon-cplusplus-plain colored"></i>
+                            <span>C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 2: Frontend -->
+                <div class="skill-category-card glass-card">
+                    <h3 class="skill-cat-title"><i class="fa-solid fa-laptop-code"></i> Frontend Technologies</h3>
+                    <div class="skills-badges">
+                        <div class="skill-badge" title="HTML5">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-badge" title="CSS3">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-badge" title="React.js">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-badge" title="React Native">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React Native</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 3: Backend & Databases -->
+                <div class="skill-category-card glass-card">
+                    <h3 class="skill-cat-title"><i class="fa-solid fa-server"></i> Backend & Databases</h3>
+                    <div class="skills-badges">
+                        <div class="skill-badge" title="Node.js">
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-badge" title="Express.js">
+                            <i class="devicon-express-original"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="skill-badge" title="Spring Boot">
+                            <i class="devicon-spring-original colored"></i>
+                            <span>Spring Boot</span>
+                        </div>
+                        <div class="skill-badge" title="MongoDB">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-badge" title="MySQL">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 4: AI/ML & Libraries -->
+                <div class="skill-category-card glass-card">
+                    <h3 class="skill-cat-title"><i class="fa-solid fa-brain"></i> AI/ML & Libraries</h3>
+                    <div class="skills-badges">
+                        <div class="skill-badge" title="Pandas">
+                            <i class="devicon-pandas-plain colored"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-badge" title="NumPy">
+                            <i class="devicon-numpy-plain colored"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="skill-badge" title="Scikit-Learn">
+                            <i class="devicon-sklearn-plain colored"></i>
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="skill-badge" title="Matplotlib">
+                            <i class="devicon-matplotlib-plain colored"></i>
+                            <span>Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category 5: Tools & Platforms -->
+                <div class="skill-category-card glass-card">
+                    <h3 class="skill-cat-title"><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Platforms</h3>
+                    <div class="skills-badges">
+                        <div class="skill-badge" title="GitHub">
+                            <i class="devicon-github-original"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-badge" title="VS Code">
+                            <i class="devicon-vscode-plain colored"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-badge" title="Postman">
+                            <i class="devicon-postman-plain colored"></i>
+                            <span>Postman</span>
+                        </div>
+                        <div class="skill-badge" title="IntelliJ IDEA">
+                            <i class="devicon-intellij-plain colored"></i>
+                            <span>IntelliJ IDEA</span>
+                        </div>
+                        <div class="skill-badge" title="Google Colab">
+                            <i class="devicon-google-plain colored"></i>
+                            <span>Google Colab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding journey-bg">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">&lt;portfolio&gt;</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Showcasing my academic works and technical software engineering builds.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: AI-Powered Automobile Marketplace -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project-automobile.jpg" alt="AI-Powered Automobile Marketplace" onerror="this.src='https://images.unsplash.com/photo-1555624403-155497276337?q=80&w=600&auto=format&fit=crop'">
+                        <div class="project-overlay">
+                            <div class="project-date"><i class="fa-regular fa-calendar"></i> Feb 2026 - June 2026</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-card-title">AI Automobile Marketplace</h3>
+                        <p class="project-card-desc">
+                            A dual-platform web and mobile software marketplace designed to facilitate buying and selling vehicles with integrated AI functionalities.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Expanded product management structure and trained custom classifiers using car photos.</li>
+                            <li>Integrated DeepSeek Chatbot API to provide instant intelligent answers for users.</li>
+                            <li>Merged lecture module, classroom scheduling, and reservation helpers to automate resource allocation and prevent timetable clashes.</li>
+                        </ul>
+                        <div class="project-tech-tags">
+                            <span>React.js</span>
+                            <span>React Native</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>DeepSeek API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Online Banking System -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project-banking.jpg" alt="Online Banking System" onerror="this.src='https://images.unsplash.com/photo-1563013544-824ae1d704d3?q=80&w=600&auto=format&fit=crop'">
+                        <div class="project-overlay">
+                            <div class="project-date"><i class="fa-regular fa-calendar"></i> July 2025 - Nov 2025</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-card-title">Secure Online Banking System</h3>
+                        <p class="project-card-desc">
+                            A secure web-based financial app built in Java to process online transactions, manage accounts, and store logging history securely.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Built a web banking platform with secure account access controls following Agile Scrum workflows.</li>
+                            <li>Designed and optimized a relational MySQL database structure for transactional integrity.</li>
+                            <li>Applied strict security protocols to prevent authentication bypass and common web vulnerabilities.</li>
+                        </ul>
+                        <div class="project-tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>HTML5/CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Fake Instagram Profile Detection -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project-instagram.jpg" alt="Fake Instagram Profile Detection" onerror="this.src='https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=600&auto=format&fit=crop'">
+                        <div class="project-overlay">
+                            <div class="project-date"><i class="fa-regular fa-calendar"></i> July 2025 - Sep 2025</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-card-title">Fake Instagram Profile Detection</h3>
+                        <p class="project-card-desc">
+                            A Python-based machine learning solution that parses social profiles and evaluates potential fraudulent profiles using mathematical classifications.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Parsed and cleaned profile parameters using Pandas and NumPy libraries.</li>
+                            <li>Implemented Ridge Regression and Random Forest model classification frameworks in Scikit-learn.</li>
+                            <li>Tuned hyperparameters and executed feature selections to improve detection accuracy.</li>
+                        </ul>
+                        <div class="project-tech-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Scikit-learn</span>
+                            <span>AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Medical Appointment Scheduling System -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project-medical.jpg" alt="Medical Appointment Scheduling System" onerror="this.src='https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=600&auto=format&fit=crop'">
+                        <div class="project-overlay">
+                            <div class="project-date"><i class="fa-regular fa-calendar"></i> Feb 2025 - June 2025</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-card-title">Medical Appointment Scheduler</h3>
+                        <p class="project-card-desc">
+                            A Java servlet web application developed to handle appointment bookings, doctor profiles, and scheduling queues.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Structured backend flows with OOP architecture for doctor-patient relations.</li>
+                            <li>Implemented custom algorithms for doctor assignments and delivery personnel queues.</li>
+                            <li>Constructed UI templates in plain HTML/CSS and JavaScript with local storage fallback.</li>
+                        </ul>
+                        <div class="project-tech-tags">
+                            <span>Java</span>
+                            <span>Servlet</span>
+                            <span>HTML5/CSS3</span>
+                            <span>JavaScript</span>
+                            <span>DSA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Smart Rider Safety System -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/project-safety.jpg" alt="Smart Rider Safety System" onerror="this.src='https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=600&auto=format&fit=crop'">
+                        <div class="project-overlay">
+                            <div class="project-date"><i class="fa-regular fa-calendar"></i> July 2024 - Nov 2024</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-card-title">Smart Rider Safety System</h3>
+                        <p class="project-card-desc">
+                            An IoT micro-controller safety system aimed at reducing road accidents through real-time vibration analytics and alerts.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Configured Arduino hardware sensors and loaded real-time vibration detection logic using C++.</li>
+                            <li>Designed crash detection algorithms and created emergency text/alert scripts.</li>
+                            <li>Tested data flow on physical hardware models, ensuring system response latency under 100ms.</li>
+                        </ul>
+                        <div class="project-tech-tags">
+                            <span>C++</span>
+                            <span>Arduino</span>
+                            <span>Vibration Sensor</span>
+                            <span>IoT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Feel free to reach out for internship opportunities or collaborations.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info cards -->
+                <div class="contact-info-panel">
+                    <h3 class="contact-panel-title">Let's build something great</h3>
+                    <p class="contact-panel-desc">
+                        I am currently seeking a Software Engineering / Full Stack Internship where I can contribute my programming skills and learn from senior engineers.
+                    </p>
+                    
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email Me</span>
+                                <a href="mailto:thulaxshithileeparan@gmail.com" class="contact-value">thulaxshithileeparan@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Call / Message</span>
+                                <a href="tel:+94742298210" class="contact-value">+94 742298210</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Jaffna, Sri Lanka</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social-row">
+                        <a href="https://github.com/IT24100920" target="_blank" class="social-icon-btn"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/thulaxshi-thileeparan-507361402" target="_blank" class="social-icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="contact-form-panel glass-card">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required placeholder="Internship Opportunity">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required placeholder="Hi Thulaxshi, I would like to discuss..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-success-msg" class="success-message-container hidden">
+                        <i class="fa-solid fa-circle-check"></i> Your email app should open with the message details prefilled.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bottom">
+        <div class="container text-center">
+            <p>&copy; 2026 Thulaxshi Thileeparan. Built from scratch with HTML, CSS, and JS.</p>
+            <p class="footer-links">
+                <a href="https://github.com/IT24100920" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/thulaxshi-thileeparan-507361402" target="_blank">LinkedIn</a> |
+                <a href="mailto:thulaxshithileeparan@gmail.com">Email</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
